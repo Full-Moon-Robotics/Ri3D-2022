@@ -20,7 +20,7 @@ public class Intake extends SubsystemBase{
      */
     public Intake(){
         super();
-        intakeMotor = new CANSparkMax(Constants.INTAKE_MOTOR_ID, MotorType.kBrushed);
+        intakeMotor = new CANSparkMax(Constants.INTAKE_MOTOR_ID, MotorType.kBrushless);
         intakeMotor.restoreFactoryDefaults();
         intakeMotor.setInverted(true);
 
