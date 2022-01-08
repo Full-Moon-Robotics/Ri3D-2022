@@ -15,4 +15,5 @@ package frc.robot;
 public final class Constants {
     // IDs
     public static final int INTAKE_MOTOR_ID = 1; // Placeholder value
+	public static final int CLIMB_MOTOR_ID = 2; // Placeholder value
 }
