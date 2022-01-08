@@ -19,11 +19,9 @@ public class Intake extends SubsystemBase{
      * @see Intake
      */
     public Intake(){
-
         super();
         intakeMotor = new CANSparkMax(Constants.INTAKE_MOTOR_ID, MotorType.kBrushed);
         intakeMotor.restoreFactoryDefaults();
-
         intakeMotor.setInverted(true);
 
     }
@@ -31,14 +29,12 @@ public class Intake extends SubsystemBase{
     /**
      * Sets an angular velocity for the motor.
      * Ranges from -1.0 to 1.0 (0 is no rotation).
-     * For expected behavior (positive values taking in balls), the sign is flipped.
      *
      * @param speed the intended direction (sign) and percent of maximum motor speed (0 to 1) 
      */
     public void run_intake(double speed) {
-        if (intakeMotor != null) {
-            intakeMotor.set(-speed);
-        }
+        // For expected behavior (positive values taking in balls), the sign is flipped.
+        intakeMotor.set(-speed);
     }
 
 }
