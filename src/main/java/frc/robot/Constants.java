@@ -13,6 +13,6 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-	// IDs
-	public static final int INTAKE_MOTOR_ID = 1;
+    // IDs
+    public static final int INTAKE_MOTOR_ID = 1; // Placeholder value
 }
