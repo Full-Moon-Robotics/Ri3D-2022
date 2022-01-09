@@ -14,9 +14,7 @@ public class Intake extends SubsystemBase{
     private CANSparkMax intakeMotor;
     
     /**
-     * Creates a new Intake and prepares its motor.
-     * 
-     * @see Intake
+     * Creates a new {@link Intake} and prepares its motor.
      */
     public Intake(){
         super();

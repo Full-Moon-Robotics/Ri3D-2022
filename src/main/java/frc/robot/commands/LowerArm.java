@@ -13,7 +13,7 @@ public class LowerArm extends CommandBase {
     private final Arm m_arm;
 
     /**
-     * Create a new LowerArm command
+     * Create a new {@link LowerArm} command
      *
      * @param arm the arm subsystem.
      */
