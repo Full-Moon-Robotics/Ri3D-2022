@@ -15,5 +15,9 @@ package frc.robot;
 public final class Constants {
     // IDs
     public static final int INTAKE_MOTOR_ID = 1; // Placeholder value
-	public static final int CLIMB_MOTOR_ID = 2; // Placeholder value
+    public static final int CLIMB_MOTOR_ID = 2; // Placeholder value
+
+    // Hard-coded speeds
+    public static final double RAISE_SPEED = 0.5; // Untested value
+    public static final double LOWER_SPEED = -0.5; // Untested value
 }
