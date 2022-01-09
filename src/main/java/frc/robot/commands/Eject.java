@@ -28,9 +28,9 @@ public class Eject extends CommandBase {
     @Override
     public void initialize() {
       if(!m_outtake.getRunning()) {
-        m_outtake.run_outtake(Constants.OUTTAKE_SPEED);
+        m_outtake.runOuttake(Constants.OUTTAKE_SPEED);
       } else {
-        m_outtake.run_outtake(0.0);
+        m_outtake.runOuttake(0.0);
       }
       m_outtake.toggleRunning();
     }

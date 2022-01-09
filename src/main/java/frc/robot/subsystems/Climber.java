@@ -26,13 +26,12 @@ public class Climber extends SubsystemBase {
         super();
         climbMotor = new CANSparkMax(Constants.CLIMB_MOTOR_ID, MotorType.kBrushless);
         climbMotor.restoreFactoryDefaults();
-        climbMotor.setInverted(true);
     }
 
     /**
      * Set climber speed.
      */
-    public void run_climber(double speed) {
+    public void runClimber(double speed) {
         climbMotor.set(speed);
     }
 }
