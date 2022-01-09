@@ -12,25 +12,18 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.*;
 import frc.robot.subsystems.*;
 
-/**
- * This class is where the bulk of the robot should be declared. Since Command-based is a
- * "declarative" paradigm, very little robot logic should actually be handled in the {@link Robot}
- * periodic methods (other than the scheduler calls). Instead, the structure of the robot (including
- * subsystems, commands, and button mappings) should be declared here.
- */
+/** Robot container with subsystems, OI devices, and commands. */
 public class RobotContainer {
     // Subsystems
-    private final Drivetrain drivetrain = new Drivetrain();
+    private final Drivetrain drivetrain;
     private final Intake m_intake;
     private final Arm m_arm;
     private final Climber m_climber;
 
-    // JOYSTICK
-    private PS4Controller controller = new PS4Controller(0);
-
-    // Axis suppliers
-    final DoubleSupplier throttleSupply = () -> -controller.getLeftY();
-    final DoubleSupplier turnSupply = () -> controller.getRightX();
+    // User input
+    private final PS4Controller controller;
+    private final DoubleSupplier throttleSupply;
+    private final DoubleSupplier turnSupply;
 
     // Triggers
     private final JoystickButton collectButton;
@@ -40,15 +33,20 @@ public class RobotContainer {
 	private final JoystickButton lowerClimberButton;
     private final JoystickButton raiseClimberButton;
 
-    /** The container for the robot. Contains subsystems, OI devices, and commands. */
+    /** Constructs a {@link RobotContainer} by initializing all robot system abstractions and commands.
+     * <p> Only construct one.
+     * Changing the button mappings should be done in {@link Constants}.
+    */
     public RobotContainer() {
-
-        drivetrain.setDefaultCommand(new DefaultDrive(
-            throttleSupply, turnSupply, drivetrain));
-
+        drivetrain = new Drivetrain();
         m_intake = new Intake();
         m_arm = new Arm();
         m_climber = new Climber();
+
+        controller = new PS4Controller(Constants.PS4_PORT);
+        // https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html#syntax
+        throttleSupply = () -> -controller.getLeftY();
+        turnSupply = () -> controller.getRightX();
 
         collectButton = new JoystickButton(controller, Constants.COLLECT_BUTTON.value);
         outtakeButton = new JoystickButton(controller, Constants.OUTAKE_BUTTON.value);
@@ -57,15 +55,17 @@ public class RobotContainer {
         lowerClimberButton = new JoystickButton(controller, Constants.LOWER_CLIMBER_BUTTON.value);
         raiseClimberButton = new JoystickButton(controller, Constants.RAISE_CLIMBER_BUTTON.value);
 
-        // Configure the button bindings
+        drivetrain.setDefaultCommand(new DefaultDrive(
+            throttleSupply, turnSupply, drivetrain));
+
         configureButtonBindings();
     }
 
     /**
-     * Use this method to define your button->command mappings. Buttons can be created by
-     * instantiating a {@link GenericHID} or one of its subclasses ({@link
-     * edu.wpi.first.wpilibj.Joystick} or {@link XboxController}), and then passing it to a {@link
-     * edu.wpi.first.wpilibj2.command.button.JoystickButton}.
+     * Binds the buttons declared earlier in the constructor to commands.
+     * <p> Once bound a single time here, the command will be called every time it has an appropriate input.
+     * Button methods can be chained, to put multiple commands on one button with different or identical conditions.
+     * Be careful about similarly named methods: whenHeld and whileHeld sound similar, but behave differently!
      */
     private void configureButtonBindings() {
         collectButton.whenHeld(new Collect(m_intake));

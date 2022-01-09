@@ -23,6 +23,7 @@ public final class Constants {
     public static final int LEFT_DRIVE_B_ID = 5; // Placeholder value
     public static final int RIGHT_DRIVE_A_ID = 6; // Placeholder value
     public static final int RIGHT_DRIVE_B_ID = 7; // Placeholder value
+    public static final int PS4_PORT = 8; // Placeholder value
 
     // Hard-coded speeds
     public static final double RAISE_SPEED = 0.5; // Untested value
