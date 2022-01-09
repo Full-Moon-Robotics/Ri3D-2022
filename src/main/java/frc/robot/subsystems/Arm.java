@@ -7,17 +7,14 @@ import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 
 /**
- * Class for the Outtake Mechanism
+ * Class for the Arm Mechanism
  */
 public class Arm extends SubsystemBase{
     
     private CANSparkMax armMotor;
     
     /**
-     * Constructor for Outtake Motor. 
-     * Initializes Outtake and sets up its outtake motor. 
-     * 
-     * @see Arm
+     * Initializes {@link Arm} and sets up its motor. 
      */
     public Arm(){
         super();
@@ -26,7 +23,7 @@ public class Arm extends SubsystemBase{
     }
     
     /**
-     * Activates the outtake motor with the specified speed and direction
+     * Activates the arm motor with the specified speed and direction
      *
      * @param velocity the speed at which the motor should run. The sign (+ or -) indicated
      * direction while the value between 0.0 and 1.0 specifies motor speed

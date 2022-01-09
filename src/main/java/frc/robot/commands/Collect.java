@@ -13,7 +13,7 @@ public class Collect extends CommandBase {
     private final Intake m_intake;
 
     /**
-     * Create a new Collect command
+     * Create a new {@link Collect} command
      *
      * @param intake the intake subsystem.
      */

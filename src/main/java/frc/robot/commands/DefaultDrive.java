@@ -15,7 +15,7 @@ public class DefaultDrive extends CommandBase {
     private DoubleSupplier m_turnSupplier;
 
     /**
-     * Create a new DefaultDrive command
+     * Create a new {@link DefaultDrive} command
      * @param throttle supplier for throttle value
      * @param turn supplier for turn value
      * @param drivetrain drivetrain subsystem to act upon

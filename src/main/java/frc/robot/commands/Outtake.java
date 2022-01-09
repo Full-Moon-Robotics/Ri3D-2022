@@ -13,7 +13,7 @@ public class Outtake extends CommandBase {
     private final Intake m_intake;
 
     /**
-     * Create a new Outtake command
+     * Create a new {@link Outtake} command
      *
      * @param intake the intake subsystem.
      */

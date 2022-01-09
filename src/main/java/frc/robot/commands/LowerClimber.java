@@ -13,7 +13,7 @@ public class LowerClimber extends CommandBase {
     private final Climber m_climber;
 
     /**
-     * Create a new LowerClimber
+     * Create a new {@link LowerClimber}
      *
      * @param climber the climber subsystem.
      */
