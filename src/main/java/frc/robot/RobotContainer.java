@@ -20,17 +20,15 @@ import frc.robot.subsystems.*;
  */
 public class RobotContainer {
     // Subsystems
-    private final Drivetrain drivetrain = new Drivetrain();
+    private final Drivetrain drivetrain;
     private final Intake m_intake;
     private final Arm m_arm;
     private final Climber m_climber;
 
-    // JOYSTICK
-    private PS4Controller controller = new PS4Controller(0);
-
-    // Axis suppliers
-    final DoubleSupplier throttleSupply = () -> -controller.getLeftY();
-    final DoubleSupplier turnSupply = () -> controller.getRightX();
+    // User input
+    private PS4Controller controller;
+    final DoubleSupplier throttleSupply;
+    final DoubleSupplier turnSupply;
 
     // Triggers
     private final JoystickButton collectButton;
@@ -42,13 +40,14 @@ public class RobotContainer {
 
     /** The container for the robot. Contains subsystems, OI devices, and commands. */
     public RobotContainer() {
-
-        drivetrain.setDefaultCommand(new DefaultDrive(
-            throttleSupply, turnSupply, drivetrain));
-
+        drivetrain = new Drivetrain();
         m_intake = new Intake();
         m_arm = new Arm();
         m_climber = new Climber();
+
+        controller = new PS4Controller(0);
+        throttleSupply = () -> -controller.getLeftY();
+        turnSupply = () -> controller.getRightX();
 
         collectButton = new JoystickButton(controller, Constants.COLLECT_BUTTON.value);
         outtakeButton = new JoystickButton(controller, Constants.OUTAKE_BUTTON.value);
@@ -57,7 +56,9 @@ public class RobotContainer {
         lowerClimberButton = new JoystickButton(controller, Constants.LOWER_CLIMBER_BUTTON.value);
         raiseClimberButton = new JoystickButton(controller, Constants.RAISE_CLIMBER_BUTTON.value);
 
-        // Configure the button bindings
+        drivetrain.setDefaultCommand(new DefaultDrive(
+            throttleSupply, turnSupply, drivetrain));
+
         configureButtonBindings();
     }
 
