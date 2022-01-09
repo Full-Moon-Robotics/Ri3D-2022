@@ -22,7 +22,6 @@ public class Intake extends SubsystemBase{
         super();
         intakeMotor = new CANSparkMax(Constants.INTAKE_MOTOR_ID, MotorType.kBrushed);
         intakeMotor.restoreFactoryDefaults();
-        intakeMotor.setInverted(true);
 
     }
     
@@ -34,7 +33,7 @@ public class Intake extends SubsystemBase{
      */
     public void runIntake(double speed) {
         // For expected behavior (positive values taking in balls), the sign is flipped.
-        intakeMotor.set(-speed);
+        intakeMotor.set(speed);
     }
 
 }
