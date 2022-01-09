@@ -19,6 +19,10 @@ public final class Constants {
     public static final int INTAKE_MOTOR_ID = 1; // Placeholder value
     public static final int CLIMB_MOTOR_ID = 2; // Placeholder value
     public static final int ARM_MOTOR_ID = 3; // Placeholder value
+    public static final int LEFT_DRIVE_A_ID = 4; // Placeholder value
+    public static final int LEFT_DRIVE_B_ID = 5; // Placeholder value
+    public static final int RIGHT_DRIVE_A_ID = 6; // Placeholder value
+    public static final int RIGHT_DRIVE_B_ID = 7; // Placeholder value
 
     // Hard-coded speeds
     public static final double RAISE_SPEED = 0.5; // Untested value
