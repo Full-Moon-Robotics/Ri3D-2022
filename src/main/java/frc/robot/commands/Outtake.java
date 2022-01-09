@@ -9,15 +9,15 @@ import frc.robot.Constants;
 import frc.robot.subsystems.Intake;
 
 /** Runs the intake in reverse while held. */
-public class ReverseCollect extends CommandBase {
+public class Outtake extends CommandBase {
     private final Intake m_intake;
 
     /**
-     * Create a new ReverseCollect command
+     * Create a new Outtake command
      *
      * @param intake the intake subsystem.
      */
-    public ReverseCollect(Intake intake) {
+    public Outtake(Intake intake) {
       addRequirements(intake);
       m_intake = intake;
     }
@@ -28,7 +28,7 @@ public class ReverseCollect extends CommandBase {
      */
     @Override
     public void initialize() {
-      m_intake.runIntake(Constants.REVERSE_INTAKE_SPEED);
+      m_intake.runIntake(Constants.OUTTAKE_SPEED);
     }
 
     /**
