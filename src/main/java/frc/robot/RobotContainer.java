@@ -40,9 +40,8 @@ public class RobotContainer {
 	private final JoystickButton lowerClimberButton;
     private final JoystickButton raiseClimberButton;
 
-    /** The container for the robot. Contains subsystems, OI devices, and commands. 
-     * @param CONSTANTS */
-    public RobotContainer(Object CONSTANTS) {
+    /** The container for the robot. Contains subsystems, OI devices, and commands. */
+    public RobotContainer() {
 
         drivetrain.setDefaultCommand(new DefaultDrive(
             throttleSupply, turnSupply, drivetrain));
