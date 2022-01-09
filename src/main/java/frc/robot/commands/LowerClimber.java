@@ -29,7 +29,7 @@ public class LowerClimber extends CommandBase {
    */
   @Override
   public void initialize() {
-    m_climber.run_climber(CONSTANTS.LOWER_SPEED);
+    m_climber.run_climber(Constants.LOWER_SPEED);
   }
 
   /**
