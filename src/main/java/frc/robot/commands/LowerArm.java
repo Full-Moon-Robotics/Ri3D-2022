@@ -6,37 +6,37 @@ package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.Constants;
-import frc.robot.subsystems.Intake;
+import frc.robot.subsystems.Arm;
 
-/** Runs the intake in reverse while held. */
-public class ReverseCollect extends CommandBase {
-    private final Intake m_intake;
+/** Lowers the arm while held. */
+public class LowerArm extends CommandBase {
+    private final Arm m_arm;
 
     /**
-     * Create a new ReverseCollect command
+     * Create a new LowerArm command
      *
-     * @param intake the intake subsystem.
+     * @param arm the arm subsystem.
      */
-    public ReverseCollect(Intake intake) {
-      addRequirements(intake);
-      m_intake = intake;
+    public LowerArm(Arm arm) {
+      addRequirements(arm);
+      m_arm = arm;
     }
 
     /**
-     * Sets the intake motors to run.
+     * Sets the arm motors to run.
      * The speed only needs to be set once.
      */
     @Override
     public void initialize() {
-      m_intake.runIntake(Constants.REVERSE_INTAKE_SPEED);
+      m_arm.runArm(Constants.LOWER_ARM_SPEED);
     }
 
     /**
-     * Stops running the intake when released.
+     * Stops running the arm when released.
      */
     @Override
     public void end(boolean interrupted) {
-      m_intake.runIntake(0.0);
+      m_arm.runArm(0.0);
     }
 
     // Implement with current monitoring as time allows
