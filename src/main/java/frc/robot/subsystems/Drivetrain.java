@@ -4,17 +4,17 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
-import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Constants;
 
 public class Drivetrain extends SubsystemBase {
     
     // declare drive motor ESCs
-    private CANSparkMax leftA = new CANSparkMax(0, MotorType.kBrushless);
-    private CANSparkMax leftB = new CANSparkMax(0, MotorType.kBrushless);
+    private CANSparkMax leftA = new CANSparkMax(Constants.LEFT_DRIVE_A_ID, MotorType.kBrushless);
+    private CANSparkMax leftB = new CANSparkMax(Constants.LEFT_DRIVE_B_ID, MotorType.kBrushless);
 
-    private CANSparkMax rightA = new CANSparkMax(0, MotorType.kBrushless);
-    private CANSparkMax rightB = new CANSparkMax(0, MotorType.kBrushless);
+    private CANSparkMax rightA = new CANSparkMax(Constants.RIGHT_DRIVE_A_ID, MotorType.kBrushless);
+    private CANSparkMax rightB = new CANSparkMax(Constants.RIGHT_DRIVE_B_ID, MotorType.kBrushless);
 
     private DifferentialDrive differentialDrive = new DifferentialDrive(leftA, rightA);
 
