@@ -32,7 +32,7 @@ public class Intake extends SubsystemBase{
      *
      * @param speed the intended direction (sign) and percent of maximum motor speed (0 to 1) 
      */
-    public void run_intake(double speed) {
+    public void runIntake(double speed) {
         // For expected behavior (positive values taking in balls), the sign is flipped.
         intakeMotor.set(-speed);
     }

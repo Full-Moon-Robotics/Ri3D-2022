@@ -29,7 +29,7 @@ public class LowerClimber extends CommandBase {
      */
     @Override
     public void initialize() {
-      m_climber.run_climber(Constants.LOWER_SPEED);
+      m_climber.runClimber(Constants.LOWER_SPEED);
     }
 
     /**
@@ -37,7 +37,7 @@ public class LowerClimber extends CommandBase {
      */
     @Override
     public void end(boolean interrupted) {
-      m_climber.run_climber(0.0);
+      m_climber.runClimber(0.0);
     }
 
     // Implement if appropriate sensors are added

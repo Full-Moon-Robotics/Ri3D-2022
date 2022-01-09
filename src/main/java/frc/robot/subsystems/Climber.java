@@ -32,7 +32,7 @@ public class Climber extends SubsystemBase {
     /**
      * Set climber speed.
      */
-    public void run_climber(double speed) {
+    public void runClimber(double speed) {
         climbMotor.set(speed);
     }
 }

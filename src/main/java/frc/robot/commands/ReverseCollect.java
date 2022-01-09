@@ -28,7 +28,7 @@ public class ReverseCollect extends CommandBase {
      */
     @Override
     public void initialize() {
-      m_intake.run_intake(Constants.REVERSE_INTAKE_SPEED);
+      m_intake.runIntake(Constants.REVERSE_INTAKE_SPEED);
     }
 
     /**
@@ -36,7 +36,7 @@ public class ReverseCollect extends CommandBase {
      */
     @Override
     public void end(boolean interrupted) {
-      m_intake.run_intake(0.0);
+      m_intake.runIntake(0.0);
     }
 
     // Implement with current monitoring as time allows
