@@ -4,6 +4,9 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.PS4Controller;
+import edu.wpi.first.wpilibj.PS4Controller.Button;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants. This class should not be used for any other purpose. All constants should be declared
@@ -25,4 +28,12 @@ public final class Constants {
     public static final double OUTTAKE_SPEED = -0.5; // Untested value
     public static final double RAISE_ARM_SPEED = 0.5; // Untested value
     public static final double LOWER_ARM_SPEED = -0.5; // Untested value
+
+    // Controller Buttons
+    public static final Button COLLECT_BUTTON = Button.kL2;
+    public static final Button OUTAKE_BUTTON = Button.kR2;
+    public static final Button LOWER_ARM_BUTTON = Button.kL1;
+    public static final Button RAISE_ARM_BUTTON = Button.kL2;
+    public static final Button LOWER_CLIMBER_BUTTON = Button.kCircle;
+    public static final Button RAISE_CLIMBER_BUTTON = Button.kCross;
 }
