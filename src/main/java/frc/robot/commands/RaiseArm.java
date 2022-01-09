@@ -13,7 +13,7 @@ public class RaiseArm extends CommandBase {
     private final Arm m_arm;
 
     /**
-     * Create a new RaiseArm command
+     * Create a new {@link RaiseArm} command
      *
      * @param arm the arm subsystem.
      */

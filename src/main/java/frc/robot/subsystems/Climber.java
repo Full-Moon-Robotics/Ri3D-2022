@@ -18,9 +18,7 @@ public class Climber extends SubsystemBase {
 
     private CANSparkMax climbMotor;
     
-    /** Creates a new Climber and prepares its motor.
-     * 
-     * @see Climber
+    /** Creates a new {@link Climber} and prepares its motor.
     */
     public Climber() {
         super();
