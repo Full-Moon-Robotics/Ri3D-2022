@@ -20,4 +20,6 @@ public final class Constants {
     // Hard-coded speeds
     public static final double RAISE_SPEED = 0.5; // Untested value
     public static final double LOWER_SPEED = -0.5; // Untested value
+    public static final double INTAKE_SPEED = 0.5; // Untested value
+    public static final double REVERSE_INTAKE_SPEED = -0.5; // Untested value
 }
