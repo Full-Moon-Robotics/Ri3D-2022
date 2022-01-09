@@ -28,10 +28,10 @@ public class RobotContainer {
 
     // Triggers
     private final JoystickButton collectButton;
-	private final JoystickButton outtakeButton;
-	private final JoystickButton lowerArmButton;
+    private final JoystickButton outtakeButton;
+    private final JoystickButton lowerArmButton;
     private final JoystickButton raiseArmButton;
-	private final JoystickButton lowerClimberButton;
+    private final JoystickButton lowerClimberButton;
     private final JoystickButton raiseClimberButton;
 
     /** Constructs a {@link RobotContainer} by initializing all robot system abstractions and commands.
