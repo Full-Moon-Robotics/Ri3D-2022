@@ -32,6 +32,9 @@ public final class Constants {
     public static final double OUTTAKE_SPEED = -0.5; // Untested value
     public static final double RAISE_ARM_SPEED = 0.5; // Untested value
     public static final double LOWER_ARM_SPEED = -0.5; // Untested value
+    public static final double AUTO_SPEED = 0.1; // Untested value
+    public static final double AUTO_ANGLE = 0.0; // Drive straight
+    public static final double AUTO_TIME = 5.0; // Untested value; in seconds
 
     // Controller Buttons
     public static final Button COLLECT_BUTTON = Button.kL2;

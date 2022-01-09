@@ -10,6 +10,7 @@ import edu.wpi.first.wpilibj.PS4Controller;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.*;
+import frc.robot.commands.auto.*;
 import frc.robot.subsystems.*;
 
 /** Robot container with subsystems, OI devices, and commands. */
@@ -77,12 +78,10 @@ public class RobotContainer {
     }
 
     /**
-     * Use this to pass the autonomous command to the main {@link Robot} class.
-     *
-     * @return the command to run in autonomous
+     * Returns the {@link SimpleAuto} command to run in autonomous.
+     * <p> A more sophisicated version of the this method would link to the dashboard and provide multiple options.
      */
     public Command getAutonomousCommand() {
-      // An ExampleCommand will run in autonomous
-      return null;
+      return new SimpleAuto(drivetrain, Constants.AUTO_SPEED, Constants.AUTO_ANGLE, Constants.AUTO_TIME);
     }
 }
