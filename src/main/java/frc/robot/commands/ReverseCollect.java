@@ -10,38 +10,38 @@ import frc.robot.subsystems.Intake;
 
 /** Runs the intake in reverse while held. */
 public class ReverseCollect extends CommandBase {
-  private final Intake m_intake;
+    private final Intake m_intake;
 
-  /**
-   * Create a new ReverseCollect command
-   *
-   * @param intake the intake subsystem.
-   */
-  public ReverseCollect(Intake intake) {
-    addRequirements(intake);
-    m_intake = intake;
-  }
+    /**
+     * Create a new ReverseCollect command
+     *
+     * @param intake the intake subsystem.
+     */
+    public ReverseCollect(Intake intake) {
+      addRequirements(intake);
+      m_intake = intake;
+    }
 
-  /**
-   * Sets the intake motors to run.
-   * The speed only needs to be set once.
-   */
-  @Override
-  public void initialize() {
-    m_intake.run_intake(Constants.REVERSE_INTAKE_SPEED);
-  }
+    /**
+     * Sets the intake motors to run.
+     * The speed only needs to be set once.
+     */
+    @Override
+    public void initialize() {
+      m_intake.run_intake(Constants.REVERSE_INTAKE_SPEED);
+    }
 
-  /**
-   * Stops running the intake when released.
-   */
-  @Override
-  public void end(boolean interrupted) {
-    m_intake.run_intake(0.0);
-  }
+    /**
+     * Stops running the intake when released.
+     */
+    @Override
+    public void end(boolean interrupted) {
+      m_intake.run_intake(0.0);
+    }
 
-  // Implement with current monitoring as time allows
-  @Override
-  public boolean isFinished() {
-    return false;
-  }
+    // Implement with current monitoring as time allows
+    @Override
+    public boolean isFinished() {
+      return false;
+    }
 }
