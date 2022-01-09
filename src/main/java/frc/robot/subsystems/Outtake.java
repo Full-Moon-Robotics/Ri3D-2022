@@ -12,6 +12,7 @@ import frc.robot.Constants;
 public class Outtake extends SubsystemBase{
     
     private CANSparkMax outtakeMotor;
+    private boolean running;
     
     /**
      * Constructor for Outtake Motor. 
@@ -24,7 +25,7 @@ public class Outtake extends SubsystemBase{
         outtakeMotor = new CANSparkMax(Constants.OUTTAKE_MOTOR_ID, MotorType.kBrushed);
         outtakeMotor.restoreFactoryDefaults();
         outtakeMotor.setInverted(true);
-
+        running = false;
     }
     
     /**
@@ -33,9 +34,12 @@ public class Outtake extends SubsystemBase{
      * @param velocity the speed at which the motor should run. The sign (+ or -) indicated
      * direction while the value between 0.0 and 1.0 specifies motor speed
      */
-    public void run_outake(double velocity) {
-        
-        outtakeMotor.set(-speed);
+    public void run_outtake(double velocity) {
+        outtakeMotor.set(-velocity);
     }
+
+    public boolean getRunning() { return running; }
+
+    public void toggleRunning() { running = !running; }
 
 }
