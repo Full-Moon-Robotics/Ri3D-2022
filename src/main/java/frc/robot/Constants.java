@@ -16,13 +16,13 @@ import edu.wpi.first.wpilibj.PS4Controller.Button;
  */
 public final class Constants {
     // IDs
-    public static final int INTAKE_MOTOR_ID = 1; // Placeholder value
-    public static final int CLIMB_MOTOR_ID = 2; // Placeholder value
-    public static final int ARM_MOTOR_ID = 3; // Placeholder value
-    public static final int LEFT_DRIVE_A_ID = 4; // Placeholder value
-    public static final int LEFT_DRIVE_B_ID = 5; // Placeholder value
-    public static final int RIGHT_DRIVE_A_ID = 6; // Placeholder value
-    public static final int RIGHT_DRIVE_B_ID = 7; // Placeholder value
+    public static final int INTAKE_MOTOR_ID = 12;
+    public static final int CLIMB_MOTOR_ID = 10;
+    public static final int ARM_MOTOR_ID = 11;
+    public static final int LEFT_DRIVE_A_ID = 5;
+    public static final int LEFT_DRIVE_B_ID = 6;
+    public static final int RIGHT_DRIVE_A_ID = 8;
+    public static final int RIGHT_DRIVE_B_ID = 9;
     public static final int PS4_PORT = 8; // Placeholder value
 
     // Hard-coded speeds
