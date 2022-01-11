@@ -83,6 +83,6 @@ public class RobotContainer {
      * <p> A more sophisicated version of the this method would link to the dashboard and provide multiple options.
      */
     public Command getAutonomousCommand() {
-      return null;// new SimpleAuto(drivetrain, AUTO_SPEED, AUTO_ANGLE, AUTO_TIME);
+      return new SimpleAuto(drivetrain, AUTO_SPEED, AUTO_ANGLE, AUTO_TIME);
     }
 }
