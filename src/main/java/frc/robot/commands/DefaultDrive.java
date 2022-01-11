@@ -30,9 +30,26 @@ public class DefaultDrive extends CommandBase {
     }
 
     @Override
+    public void initialize() {
+        // make sure motors are all set to 0 on start
+        m_drivetrain.arcadeDrive(0, 0);
+    }
+
+    @Override
     public void execute() {
         m_drivetrain.arcadeDrive(m_throttleSupplier.getAsDouble(),
             m_turnSupplier.getAsDouble());        
+    }
+
+    @Override
+    public void end(boolean interrupted) {
+        // make sure motors are all set to 0 on end
+        m_drivetrain.arcadeDrive(0, 0);
+    }
+
+    @Override
+    public boolean isFinished() {
+        return false;
     }
 
 }

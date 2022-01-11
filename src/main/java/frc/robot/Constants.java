@@ -23,15 +23,15 @@ public final class Constants {
     public static final int LEFT_DRIVE_B_ID = 6;
     public static final int RIGHT_DRIVE_A_ID = 8;
     public static final int RIGHT_DRIVE_B_ID = 9;
-    public static final int PS4_PORT = 8; // Placeholder value
+    public static final int PS4_PORT = 0; // Placeholder value
 
     // Hard-coded speeds
     public static final double RAISE_CLIMB_SPEED = 0.5; // Untested value
     public static final double LOWER_CLIMB_SPEED = -0.5; // Untested value
     public static final double INTAKE_SPEED = 0.5; // Untested value
-    public static final double OUTTAKE_SPEED = -0.5; // Untested value
-    public static final double RAISE_ARM_SPEED = 0.5; // Untested value
-    public static final double LOWER_ARM_SPEED = -0.5; // Untested value
+    public static final double OUTTAKE_SPEED = -1.0; // Untested value
+    public static final double RAISE_ARM_SPEED = 0.1; // Untested value
+    public static final double LOWER_ARM_SPEED = -0.1; // Untested value
     public static final double AUTO_SPEED = 0.1; // Untested value
     public static final double AUTO_ANGLE = 0.0; // Drive straight
     public static final double AUTO_TIME = 5.0; // Untested value; in seconds
