@@ -5,7 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants;
+import static frc.robot.Constants.*;
 import frc.robot.subsystems.Climber;
 
 /** Raises the climber while held. */
@@ -29,7 +29,7 @@ public class RaiseClimber extends CommandBase {
      */
     @Override
     public void initialize() {
-      m_climber.runClimber(Constants.RAISE_SPEED);
+      m_climber.runClimber(RAISE_SPEED);
     }
 
     /**
