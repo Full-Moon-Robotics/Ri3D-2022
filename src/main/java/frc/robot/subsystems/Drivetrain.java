@@ -36,6 +36,7 @@ public class Drivetrain extends SubsystemBase {
         rightA.setIdleMode(IdleMode.kBrake);
         rightB.setIdleMode(IdleMode.kBrake);
 
+        // As of 2022, drivetrain motors are not automatically inverted
         // invert the right side of the drivetrain so forward moves it forward
         rightA.setInverted(true);
 
