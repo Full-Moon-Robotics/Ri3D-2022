@@ -5,7 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants;
+import static frc.robot.Constants.*;
 import frc.robot.subsystems.Arm;
 
 /** Raises the arm while held. */
@@ -28,7 +28,7 @@ public class RaiseArm extends CommandBase {
      */
     @Override
     public void initialize() {
-      m_arm.runArm(Constants.RAISE_ARM_SPEED);
+      m_arm.runArm(RAISE_ARM_SPEED);
     }
 
     /**

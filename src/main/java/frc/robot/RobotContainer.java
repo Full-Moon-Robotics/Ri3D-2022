@@ -12,6 +12,7 @@ import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.*;
 import frc.robot.commands.auto.*;
 import frc.robot.subsystems.*;
+import static frc.robot.Constants.*;
 
 /** Robot container with subsystems, OI devices, and commands. */
 public class RobotContainer {
@@ -44,17 +45,17 @@ public class RobotContainer {
         m_arm = new Arm();
         m_climber = new Climber();
 
-        controller = new PS4Controller(Constants.PS4_PORT);
+        controller = new PS4Controller(PS4_PORT);
         // https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html#syntax
         throttleSupply = () -> -controller.getLeftY();
         turnSupply = () -> controller.getRightX();
 
-        collectButton = new JoystickButton(controller, Constants.COLLECT_BUTTON.value);
-        outtakeButton = new JoystickButton(controller, Constants.OUTAKE_BUTTON.value);
-        lowerArmButton = new JoystickButton(controller, Constants.LOWER_ARM_BUTTON.value);
-        raiseArmButton = new JoystickButton(controller, Constants.RAISE_ARM_BUTTON.value);
-        lowerClimberButton = new JoystickButton(controller, Constants.LOWER_CLIMBER_BUTTON.value);
-        raiseClimberButton = new JoystickButton(controller, Constants.RAISE_CLIMBER_BUTTON.value);
+        collectButton = new JoystickButton(controller, COLLECT_BUTTON.value);
+        outtakeButton = new JoystickButton(controller, OUTAKE_BUTTON.value);
+        lowerArmButton = new JoystickButton(controller, LOWER_ARM_BUTTON.value);
+        raiseArmButton = new JoystickButton(controller, RAISE_ARM_BUTTON.value);
+        lowerClimberButton = new JoystickButton(controller, LOWER_CLIMBER_BUTTON.value);
+        raiseClimberButton = new JoystickButton(controller, RAISE_CLIMBER_BUTTON.value);
 
         drivetrain.setDefaultCommand(new DefaultDrive(
             throttleSupply, turnSupply, drivetrain));
@@ -82,6 +83,6 @@ public class RobotContainer {
      * <p> A more sophisicated version of the this method would link to the dashboard and provide multiple options.
      */
     public Command getAutonomousCommand() {
-      return new SimpleAuto(drivetrain, Constants.AUTO_SPEED, Constants.AUTO_ANGLE, Constants.AUTO_TIME);
+      return new SimpleAuto(drivetrain, AUTO_SPEED, AUTO_ANGLE, AUTO_TIME);
     }
 }

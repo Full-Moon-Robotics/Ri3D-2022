@@ -5,7 +5,7 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Constants;
+import static frc.robot.Constants.*;
 import frc.robot.subsystems.Intake;
 
 /** Runs the intake while held. */
@@ -28,7 +28,7 @@ public class Collect extends CommandBase {
      */
     @Override
     public void initialize() {
-      m_intake.runIntake(Constants.INTAKE_SPEED);
+      m_intake.runIntake(INTAKE_SPEED);
     }
 
     /**

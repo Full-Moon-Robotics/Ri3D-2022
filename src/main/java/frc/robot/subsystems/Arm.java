@@ -4,7 +4,7 @@ import com.revrobotics.CANSparkMax;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import frc.robot.Constants;
+import static frc.robot.Constants.*;
 
 /**
  * Class for the Arm Mechanism
@@ -18,7 +18,7 @@ public class Arm extends SubsystemBase{
      */
     public Arm(){
         super();
-        armMotor = new CANSparkMax(Constants.ARM_MOTOR_ID, MotorType.kBrushless);
+        armMotor = new CANSparkMax(ARM_MOTOR_ID, MotorType.kBrushless);
         armMotor.restoreFactoryDefaults();
     }
     

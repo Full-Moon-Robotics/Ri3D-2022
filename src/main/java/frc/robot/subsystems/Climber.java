@@ -9,7 +9,7 @@ import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
-import frc.robot.Constants;
+import static frc.robot.Constants.*;
 
 /**
  * Interface for the climbing winch.
@@ -22,7 +22,7 @@ public class Climber extends SubsystemBase {
     */
     public Climber() {
         super();
-        climbMotor = new CANSparkMax(Constants.CLIMB_MOTOR_ID, MotorType.kBrushless);
+        climbMotor = new CANSparkMax(CLIMB_MOTOR_ID, MotorType.kBrushless);
         climbMotor.restoreFactoryDefaults();
     }
 
