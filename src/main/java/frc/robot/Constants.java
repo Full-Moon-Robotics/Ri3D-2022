@@ -40,7 +40,7 @@ public final class Constants {
     public static final Button COLLECT_BUTTON = Button.kL2;
     public static final Button OUTAKE_BUTTON = Button.kR2;
     public static final Button LOWER_ARM_BUTTON = Button.kL1;
-    public static final Button RAISE_ARM_BUTTON = Button.kL2;
+    public static final Button RAISE_ARM_BUTTON = Button.kR1;
     public static final Button LOWER_CLIMBER_BUTTON = Button.kCircle;
     public static final Button RAISE_CLIMBER_BUTTON = Button.kCross;
 }
