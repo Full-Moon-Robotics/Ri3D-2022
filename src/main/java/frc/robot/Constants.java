@@ -26,8 +26,8 @@ public final class Constants {
     public static final int PS4_PORT = 8; // Placeholder value
 
     // Hard-coded speeds
-    public static final double RAISE_SPEED = 0.5; // Untested value
-    public static final double LOWER_SPEED = -0.5; // Untested value
+    public static final double RAISE_CLIMB_SPEED = 0.5; // Untested value
+    public static final double LOWER_CLIMB_SPEED = -0.5; // Untested value
     public static final double INTAKE_SPEED = 0.5; // Untested value
     public static final double OUTTAKE_SPEED = -0.5; // Untested value
     public static final double RAISE_ARM_SPEED = 0.5; // Untested value
