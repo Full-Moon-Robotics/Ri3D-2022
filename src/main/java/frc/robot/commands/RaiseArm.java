@@ -27,7 +27,7 @@ public class RaiseArm extends CommandBase {
      * The speed only needs to be set once.
      */
     @Override
-    public void execute() {
+    public void initialize() {
       m_arm.runArm(RAISE_ARM_SPEED);
     }
 

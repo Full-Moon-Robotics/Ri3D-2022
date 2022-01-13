@@ -21,6 +21,9 @@ public class Arm extends SubsystemBase{
         super();
         armMotor = new CANSparkMax(ARM_MOTOR_ID, MotorType.kBrushless);
         armMotor.restoreFactoryDefaults();
+        // Brake mode kills energy in the motor by shorting all wires
+        // With high gear reductions, brake mode can highly slow down movement
+        // Use PID instead to reliably hold a motor in place
         armMotor.setIdleMode(IdleMode.kBrake);
     }
     
